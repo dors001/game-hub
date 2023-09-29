@@ -10,7 +10,7 @@ const useGames = () => {
   const gameQuery = useGameQueryStore(s => s.gameQuery)
   return useInfiniteQuery<FetchResponse<Game>, Error>({
     queryKey: ['games', gameQuery],
-    queryFn: ({ pageParam = 1 }) => apiClient.get({ params: { 
+    queryFn: ({ pageParam = 1 }) => apiClient.getAll({ params: { 
       genres: gameQuery.genreId, 
       parent_platforms: gameQuery.platformId, 
       ordering: gameQuery.sortOrder,
