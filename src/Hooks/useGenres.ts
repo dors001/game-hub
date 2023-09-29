@@ -1,8 +1,7 @@
-import genres from '../Data/genres';
 import { useQuery } from '@tanstack/react-query';
-import APIClient from '../Services/api-client';
 import ms from 'ms';
-import { Genre } from '../entities/Genre';
+import APIClient from '../Services/api-client';
+import Genre from '../entities/Genre';
 
 const apiClient = new APIClient<Genre>('/genres');
 
